@@ -149,10 +149,10 @@ Module['FS_createPath']('/CarDrive/Content', 'Paks', true, true);
           for (var i = 0; i < files.length; ++i) {
             DataRequest.prototype.requests[files[i].filename].onload();
           }
-              Module['removeRunDependency']('datafile_C:/Users/Nitro/Documents/Unreal Projects/CarDrive/Binaries/HTML5/CarDrive-HTML5-Shipping.data');
+              Module['removeRunDependency']('datafile_https://dl.dropboxusercontent.com/s/kujymw2n3crunba/CarDrive-HTML5-Shipping.data?dl=0');
 
     };
-    Module['addRunDependency']('datafile_C:/Users/Nitro/Documents/Unreal Projects/CarDrive/Binaries/HTML5/CarDrive-HTML5-Shipping.data');
+    Module['addRunDependency']('datafile_https://dl.dropboxusercontent.com/s/kujymw2n3crunba/CarDrive-HTML5-Shipping.data?dl=0');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
