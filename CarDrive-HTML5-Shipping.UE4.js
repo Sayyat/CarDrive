@@ -405,8 +405,8 @@ Module['UE4_fullscreenFilteringMode'] = 0;
 
 var enableReadFromIndexedDB = (location.search.indexOf('noidbread') == -1);
 var enableWriteToIndexedDB = enableReadFromIndexedDB && (location.search.indexOf('noidbwrite') == -1);
-enableReadFromIndexedDB = true;
-enableWriteToIndexedDB = true;
+enableReadFromIndexedDB = false;
+enableWriteToIndexedDB = false;
 
 if (!enableReadFromIndexedDB) showWarningRibbon('Running with IndexedDB access disabled.');
 else if (!enableWriteToIndexedDB) showWarningRibbon('Running in read-only IndexedDB access mode.');
@@ -1203,10 +1203,10 @@ $(document).ready(function() {
 	// ----------------------------------------
 	// GO !
 	openIndexedDB(Module['UE4_indexedDBName'], Module['UE4_indexedDBVersion'] || 1).then(withIndexedDB).catch(function(e) {
-		if ( enableReadFromIndexedDB || enableWriteToIndexedDB ) {
-			console.error('Failed to openIndexedDB, proceeding without reading or storing contents to IndexedDB! Error: ');
-		}
-		console.error(e);
+// 		if ( enableReadFromIndexedDB || enableWriteToIndexedDB ) {
+// 			console.error('Failed to openIndexedDB, proceeding without reading or storing contents to IndexedDB! Error: ');
+// 		}
+// 		console.error(e);
 		withIndexedDB(null);
 	});
 });
