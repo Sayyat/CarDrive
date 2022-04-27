@@ -1203,10 +1203,10 @@ $(document).ready(function() {
 	// ----------------------------------------
 	// GO !
 	openIndexedDB(Module['UE4_indexedDBName'], Module['UE4_indexedDBVersion'] || 1).then(withIndexedDB).catch(function(e) {
-// 		if ( enableReadFromIndexedDB || enableWriteToIndexedDB ) {
-// 			console.error('Failed to openIndexedDB, proceeding without reading or storing contents to IndexedDB! Error: ');
-// 		}
-// 		console.error(e);
+		if ( enableReadFromIndexedDB || enableWriteToIndexedDB ) {
+			console.error('Failed to openIndexedDB, proceeding without reading or storing contents to IndexedDB! Error: ');
+		}
+		console.error(e);
 		withIndexedDB(null);
 	});
 });
